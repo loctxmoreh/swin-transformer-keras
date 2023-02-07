@@ -1,0 +1,12 @@
+name: swin-keras
+channels:
+    - conda-forge
+dependencies:
+    - python=3.8
+    - cudatoolkit=11.2
+    - numpy
+    - pip
+    - pip:
+        - tensorflow==2.9.0
+        - tensorflow_addons
+        - matplotlib
