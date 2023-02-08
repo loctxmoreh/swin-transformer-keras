@@ -55,15 +55,6 @@ y_test = keras.utils.to_categorical(y_test, num_classes)
 print(f"x_train shape: {x_train.shape} - y_train shape: {y_train.shape}")
 print(f"x_test shape: {x_test.shape} - y_test shape: {y_test.shape}")
 
-plt.figure(figsize=(10, 10))
-for i in range(25):
-    plt.subplot(5, 5, i + 1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(x_train[i])
-plt.show()
-
 """
 ## Configure the hyperparameters
 
@@ -516,7 +507,7 @@ plt.ylabel("Loss")
 plt.title("Train and Validation Losses Over Epochs", fontsize=14)
 plt.legend()
 plt.grid()
-plt.show()
+plt.savefig("loss-curve.png")
 
 """
 Let's display the final results of the training on CIFAR-100.
